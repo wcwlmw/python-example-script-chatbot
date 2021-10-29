@@ -1,9 +1,9 @@
 #lets you use time
 import time
 #lets you use random
-import random
-#lets you use the oporating system function
-import os
+import random, os, sys, re #lets me use these systems
+from time import sleep #lets me use a spicific part of time
+thanksMatch = re.compile("thanks", re.IGNORECASE) #hashtag makes it a note and does not affect code. also this means the code ignores capitals.
 #prints what is in the ()
 print ("hello")
 #lets you have computer say something and have you respond. can be used in later
@@ -38,8 +38,19 @@ print(write.read())
 time.sleep(random.randint(1,3))
 print('pretty cool right?')
 time.sleep(1)
-#close a file
+#delete a file
 os.remove("write here.txt")
+
+def how_to_play(i):#this defines a set of instructions that can be used later
+  htp = i + "\n"
+
+  for char in htp:
+    sleep(.025)
+    sys.stdout.write(char)
+    sys.stdout.flush()
+
+how_to_play("i can say things slowly")#this calls a define function(Line 44)
+time.sleep(1)
 print("bye!")
 time.sleep(random.randint(1,2))
 #close program
